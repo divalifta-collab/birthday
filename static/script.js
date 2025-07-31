@@ -21,7 +21,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
   function detect() {
     analyser.getByteFrequencyData(data);
     let avg = data.reduce((a, b) => a + b) / data.length / 256;
-    if (avg > 0.4 && !blown) {
+    if (avg > 0.1 && !blown) {
       blown = true;
       document.getElementById("cake").src = "static/2.png";
       document.querySelector("button").style.display = "inline-block";
