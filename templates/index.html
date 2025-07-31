@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday</title>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  <style>
+    body {
+      text-align: center;
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    img {
+      width: 80vw;
+      max-width: 900px;
+      height: auto;
+      max-height: 60vh;
+      object-fit: contain;
+      display: block;
+      margin: 40px auto 0 auto;
+    }
+    h1 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      position: static;
+      z-index: auto;
+    }
+    button {
+      display: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: hotpink;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      position: static;
+      z-index: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>💨 Blow the candles! 🕯️ 🎉</h1>
+  <img id="cake" src="{{ url_for('static', filename='1.png') }}" />
+  <br />
+  <button onclick="showSurprise()">Click Me!</button>
+  <audio id="bg-music" src="{{ url_for('static', filename='katy_birthday.mp3') }}" autoplay loop hidden></audio>
+</body>
+</html>
